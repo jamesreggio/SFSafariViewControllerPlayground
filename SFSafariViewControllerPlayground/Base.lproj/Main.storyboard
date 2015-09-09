@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SR6-vn-Oj0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qbY-GW-HlW" userLabel="stack">
+                                <rect key="frame" x="20" y="94" width="560" height="422"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFSafariViewController Playground" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SF-5W-1O1" userLabel="title">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-N3-oXN" userLabel="description">
+                                        <rect key="frame" x="0.0" y="41" width="560" height="90"/>
+                                        <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
+                                        <string key="text">The following buttons will instantiate and navigate a SFSafariViewController to a page that returns the specified HTTP status code(s).
+
+The navigation bar will update when the delegate receives didCompleteInitialLoad:</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KCr-Pj-cC8" userLabel="buttonStack">
+                                        <rect key="frame" x="0.0" y="151" width="560" height="271"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JF9-ed-Ct9" userLabel="dnsFailure">
+                                                <rect key="frame" x="0.0" y="0.0" width="149" height="30"/>
+                                                <state key="normal" title="DNS resolution failure"/>
+                                                <connections>
+                                                    <action selector="navigateToDNSFailure:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hjG-NL-V3W"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eSJ-8H-OFm" userLabel="instantStack">
+                                                <rect key="frame" x="0.0" y="35" width="214" height="26"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant load:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-VS-3b7" userLabel="instant">
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hc6-tx-4I0" userLabel="instant200">
+                                                        <rect key="frame" x="104" y="-5" width="30" height="30"/>
+                                                        <state key="normal" title="200"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/200"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Ly6-b0-iJB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ8-5h-c9x" userLabel="instant404">
+                                                        <rect key="frame" x="144" y="-5" width="30" height="30"/>
+                                                        <state key="normal" title="404"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/404"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="M04-RL-0Vz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-kK-Prq" userLabel="instant500">
+                                                        <rect key="frame" x="184" y="-5" width="30" height="30"/>
+                                                        <state key="normal" title="500"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/500"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hPd-Rb-zpj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="wCm-R8-oBg" userLabel="delayStack">
+                                                <rect key="frame" x="0.0" y="66" width="229" height="206"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 sec delay:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8t-fb-3jF" userLabel="delay">
+                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MwF-8c-BZM" userLabel="delayButtonStack">
+                                                        <rect key="frame" x="105" y="-5" width="124" height="210"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="huS-mz-jfo" userLabel="delaySimpleStack">
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kr-5n-zrN" userLabel="delay200">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                        <state key="normal" title="200"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/200"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                                <integer key="value" value="2000"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dNn-nI-vC8"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khr-Uq-qB3" userLabel="delay404">
+                                                                        <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                                                        <state key="normal" title="404"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/404"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                                <integer key="value" value="2000"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Phg-b0-Fam"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCn-73-pE2" userLabel="delay500">
+                                                                        <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                                                        <state key="normal" title="500"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/500"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                                <integer key="value" value="2000"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="cMs-g6-lXf"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt5-XG-yCF" userLabel="delay301_301_200">
+                                                                <rect key="frame" x="0.0" y="30" width="124" height="30"/>
+                                                                <state key="normal" title="301 → 301 → 200"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/301/301/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                        <integer key="value" value="2000"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="G13-V3-ATa"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Nn-eT-TVs" userLabel="delay301_200">
+                                                                <rect key="frame" x="0.0" y="60" width="76" height="30"/>
+                                                                <state key="normal" title="301 → 200"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/301/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                        <integer key="value" value="2000"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="I1J-OC-cQl"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nk2-Cc-x6x" userLabel="delay301_404">
+                                                                <rect key="frame" x="0.0" y="90" width="77" height="30"/>
+                                                                <state key="normal" title="301 → 404"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/301/404"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                        <integer key="value" value="2000"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="1wR-Ai-EVq"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD0-PK-RRb" userLabel="delay302_200">
+                                                                <rect key="frame" x="0.0" y="120" width="78" height="30"/>
+                                                                <state key="normal" title="302 → 200"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/302/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                        <integer key="value" value="2000"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="vDB-bJ-FXt"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KO-5C-pug" userLabel="delay307_200">
+                                                                <rect key="frame" x="0.0" y="150" width="77" height="30"/>
+                                                                <state key="normal" title="307 → 200"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/307/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                        <integer key="value" value="2000"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="pTz-hc-VHX"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2U-zz-ZvF" userLabel="delay308_200">
+                                                                <rect key="frame" x="0.0" y="180" width="78" height="30"/>
+                                                                <state key="normal" title="308 → 200"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/308/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                        <integer key="value" value="2000"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hvf-X6-BgU"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qbY-GW-HlW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="0gW-P9-qtO"/>
+                            <constraint firstItem="qbY-GW-HlW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6nb-yz-8Hc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qbY-GW-HlW" secondAttribute="trailing" id="H3j-Oe-nGy"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="wce-LV-9AD"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="adx-Ud-mjs">
+            <objects>
+                <navigationController id="SR6-vn-Oj0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zbo-TL-z6Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hcP-P4-6eU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ufc-hY-iPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
