@@ -6,8 +6,8 @@ Simple iOS 9 app to test delegate callbacks in the new
 ## How it works
 
 When you tap a button corresponding to an HTTP status, a
-`SFSafariViewController` instance will be instantiated and pushed onto the top-
-level `UINavigationController`.
+`SFSafariViewController` instance will be instantiated and pushed onto the
+top-level `UINavigationController`.
 
 The navigation bar will indicate when the `SFSafariViewControllerDelegate`
 receives the `didCompleteInitialLoad:` message.
