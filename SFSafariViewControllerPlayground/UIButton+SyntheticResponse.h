@@ -12,5 +12,6 @@
 
 @property (nonatomic) NSString *_syn_path;
 @property (nonatomic) NSNumber *_syn_wait;
+@property (nonatomic) BOOL _syn_modal;
 
 @end

@@ -31,4 +31,14 @@
     return objc_getAssociatedObject(self, @selector(_syn_wait));
 }
 
+@dynamic _syn_modal;
+
+- (void)set_syn_modal:(BOOL)modal {
+    objc_setAssociatedObject(self, @selector(_syn_modal), @(modal), OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (BOOL)_syn_modal {
+    return [objc_getAssociatedObject(self, @selector(_syn_modal)) boolValue];
+}
+
 @end
