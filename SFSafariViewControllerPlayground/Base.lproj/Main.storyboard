@@ -31,7 +31,7 @@
                                         <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
                                         <string key="text">The following buttons will instantiate and navigate a SFSafariViewController to a page that returns the specified HTTP status code(s).
 
-The navigation bar will update when the delegate receives didCompleteInitialLoad:</string>
+The navigation bar will update when the delegate receives the didCompleteInitialLoad: message.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>

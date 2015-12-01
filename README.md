@@ -4,8 +4,7 @@ Simple iOS 9 app to test delegate callbacks and reproduce bugs in the new
 [`SFSafariViewController`](https://developer.apple.com/videos/wwdc/2015/?id=504).
 
 ![Delegates](/screenshot-1.png?raw=true)
-![Bugs](/screenshot-1.png?raw=true)
-![Synthetic Response](/screenshot-3.png?raw=true)
+![Bugs](/screenshot-2.png?raw=true)
 
 ## How it works
 
