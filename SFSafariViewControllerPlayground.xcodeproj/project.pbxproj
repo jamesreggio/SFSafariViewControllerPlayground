@@ -12,7 +12,7 @@
 		CBB5FAF21B9F9F3D00A040D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB5FAF11B9F9F3D00A040D6 /* ViewController.m */; };
 		CBB5FAF51B9F9F3D00A040D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB5FAF31B9F9F3D00A040D6 /* Main.storyboard */; };
 		CBB5FAF71B9F9F3D00A040D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB5FAF61B9F9F3D00A040D6 /* Assets.xcassets */; };
-		CBC216601B9FF4C6007110D4 /* UIButton+SyntheticResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC2165F1B9FF4C6007110D4 /* UIButton+SyntheticResponse.m */; settings = {ASSET_TAGS = (); }; };
+		CBC216601B9FF4C6007110D4 /* UIButton+Playground.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC2165F1B9FF4C6007110D4 /* UIButton+Playground.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,8 @@
 		CBB5FAF41B9F9F3D00A040D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB5FAF61B9F9F3D00A040D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB5FAFB1B9F9F3D00A040D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBC2165F1B9FF4C6007110D4 /* UIButton+SyntheticResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SyntheticResponse.m"; sourceTree = "<group>"; };
-		CBE093681BA0BD6100C96774 /* UIButton+SyntheticResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SyntheticResponse.h"; sourceTree = "<group>"; };
+		CBC2165F1B9FF4C6007110D4 /* UIButton+Playground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Playground.m"; sourceTree = "<group>"; };
+		CBE093681BA0BD6100C96774 /* UIButton+Playground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Playground.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +59,12 @@
 		CBB5FAE91B9F9F3D00A040D6 /* SFSafariViewControllerPlayground */ = {
 			isa = PBXGroup;
 			children = (
-				CBE093681BA0BD6100C96774 /* UIButton+SyntheticResponse.h */,
-				CBC2165F1B9FF4C6007110D4 /* UIButton+SyntheticResponse.m */,
-				CBB5FAED1B9F9F3D00A040D6 /* AppDelegate.h */,
-				CBB5FAEE1B9F9F3D00A040D6 /* AppDelegate.m */,
+				CBE093681BA0BD6100C96774 /* UIButton+Playground.h */,
+				CBC2165F1B9FF4C6007110D4 /* UIButton+Playground.m */,
 				CBB5FAF01B9F9F3D00A040D6 /* ViewController.h */,
 				CBB5FAF11B9F9F3D00A040D6 /* ViewController.m */,
 				CBB5FAF31B9F9F3D00A040D6 /* Main.storyboard */,
 				CBB5FAF61B9F9F3D00A040D6 /* Assets.xcassets */,
-				CBB5FAFB1B9F9F3D00A040D6 /* Info.plist */,
 				CBB5FAEA1B9F9F3D00A040D6 /* Supporting Files */,
 			);
 			path = SFSafariViewControllerPlayground;
@@ -76,6 +73,9 @@
 		CBB5FAEA1B9F9F3D00A040D6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CBB5FAED1B9F9F3D00A040D6 /* AppDelegate.h */,
+				CBB5FAEE1B9F9F3D00A040D6 /* AppDelegate.m */,
+				CBB5FAFB1B9F9F3D00A040D6 /* Info.plist */,
 				CBB5FAEB1B9F9F3D00A040D6 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBC216601B9FF4C6007110D4 /* UIButton+SyntheticResponse.m in Sources */,
+				CBC216601B9FF4C6007110D4 /* UIButton+Playground.m in Sources */,
 				CBB5FAF21B9F9F3D00A040D6 /* ViewController.m in Sources */,
 				CBB5FAEF1B9F9F3D00A040D6 /* AppDelegate.m in Sources */,
 				CBB5FAEC1B9F9F3D00A040D6 /* main.m in Sources */,

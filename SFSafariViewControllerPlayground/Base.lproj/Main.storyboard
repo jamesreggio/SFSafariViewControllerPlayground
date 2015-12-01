@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegates-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qbY-GW-HlW" userLabel="stack">
-                                <rect key="frame" x="20" y="94" width="560" height="452"/>
+                                <rect key="frame" x="20" y="94" width="560" height="422"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFSafariViewController Playground" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SF-5W-1O1" userLabel="title">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
@@ -26,86 +26,31 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-N3-oXN" userLabel="description">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-N3-oXN" userLabel="description">
                                         <rect key="frame" x="0.0" y="41" width="560" height="90"/>
                                         <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
                                         <string key="text">The following buttons will instantiate and navigate a SFSafariViewController to a page that returns the specified HTTP status code(s).
 
-The navigation bar will update when the delegate receives didCompleteInitialLoad: unless pesented modally.</string>
+The navigation bar will update when the delegate receives didCompleteInitialLoad:</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KCr-Pj-cC8" userLabel="buttonStack">
-                                        <rect key="frame" x="0.0" y="151" width="560" height="302"/>
+                                        <rect key="frame" x="0.0" y="151" width="560" height="271"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JF9-ed-Ct9" userLabel="dnsFailure">
                                                 <rect key="frame" x="0.0" y="0.0" width="149" height="30"/>
                                                 <state key="normal" title="DNS resolution failure"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="https://www.thiswillnoresolve.co"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="navigateToDNSFailure:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hjG-NL-V3W"/>
+                                                    <action selector="navigateToURL:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="NuT-ka-pbm"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="eSJ-8H-OFm" userLabel="modalStack">
-                                                <rect key="frame" x="0.0" y="35" width="214" height="26"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-VS-3b7" userLabel="modal">
-                                                        <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SBH-Ih-Dzp" userLabel="modalSimpleStack">
-                                                        <rect key="frame" x="104" y="-5" width="110" height="30"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hc6-tx-4I0" userLabel="modal200">
-                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                                <state key="normal" title="200"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/200"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
-                                                                        <integer key="value" value="0"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_syn_modal" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Ly6-b0-iJB"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ8-5h-c9x" userLabel="modal404">
-                                                                <rect key="frame" x="40" y="0.0" width="30" height="30"/>
-                                                                <state key="normal" title="404"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/404"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
-                                                                        <integer key="value" value="0"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_syn_modal" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="M04-RL-0Vz"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-kK-Prq" userLabel="modal500">
-                                                                <rect key="frame" x="80" y="0.0" width="30" height="30"/>
-                                                                <state key="normal" title="500"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/500"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
-                                                                        <integer key="value" value="0"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_syn_modal" value="YES"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="navigateToSyntheticResponse:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hPd-Rb-zpj"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-ja-5gX" userLabel="instantStack">
-                                                <rect key="frame" x="0.0" y="66" width="214" height="26"/>
+                                                <rect key="frame" x="0.0" y="35" width="214" height="26"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant load:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sep-1F-x4z" userLabel="instant">
                                                         <rect key="frame" x="0.0" y="0.0" width="94" height="21"/>
@@ -120,8 +65,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                                 <state key="normal" title="200"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/200"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="0"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -133,8 +78,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="40" y="0.0" width="30" height="30"/>
                                                                 <state key="normal" title="404"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/404"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="404"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="0"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -146,8 +91,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="80" y="0.0" width="30" height="30"/>
                                                                 <state key="normal" title="500"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/500"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="500"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="0"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -160,7 +105,7 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wCm-R8-oBg" userLabel="delayStack">
-                                                <rect key="frame" x="0.0" y="96" width="228" height="206"/>
+                                                <rect key="frame" x="0.0" y="66" width="228" height="206"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 sec delay:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8t-fb-3jF" userLabel="delay">
                                                         <rect key="frame" x="0.0" y="0.0" width="92" height="21"/>
@@ -178,8 +123,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                                         <state key="normal" title="200"/>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/200"/>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="200"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                                 <integer key="value" value="2000"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -191,8 +136,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                         <rect key="frame" x="40" y="0.0" width="30" height="30"/>
                                                                         <state key="normal" title="404"/>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/404"/>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="404"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                                 <integer key="value" value="2000"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -204,8 +149,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                         <rect key="frame" x="80" y="0.0" width="30" height="30"/>
                                                                         <state key="normal" title="500"/>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/500"/>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="500"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                                 <integer key="value" value="2000"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -219,8 +164,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="0.0" y="30" width="124" height="30"/>
                                                                 <state key="normal" title="301 → 301 → 200"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/301/301/200"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="301/301/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="2000"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -232,8 +177,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="0.0" y="60" width="76" height="30"/>
                                                                 <state key="normal" title="301 → 200"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/301/200"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="301/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="2000"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -245,8 +190,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="0.0" y="90" width="77" height="30"/>
                                                                 <state key="normal" title="301 → 404"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/301/404"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="301/404"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="2000"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -258,8 +203,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="0.0" y="120" width="78" height="30"/>
                                                                 <state key="normal" title="302 → 200"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/302/200"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="302/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="2000"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -271,8 +216,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="0.0" y="150" width="77" height="30"/>
                                                                 <state key="normal" title="307 → 200"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/307/200"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="307/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="2000"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -284,8 +229,8 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                                                                 <rect key="frame" x="0.0" y="180" width="78" height="30"/>
                                                                 <state key="normal" title="308 → 200"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_syn_path" value="/308/200"/>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_syn_wait">
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="308/200"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_play_wait">
                                                                         <integer key="value" value="2000"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -309,28 +254,157 @@ The navigation bar will update when the delegate receives didCompleteInitialLoad
                             <constraint firstAttribute="trailingMargin" secondItem="qbY-GW-HlW" secondAttribute="trailing" id="H3j-Oe-nGy"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Delegates" image="Timer" id="GMW-2R-t75" userLabel="Item"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="wce-LV-9AD"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="323" y="374"/>
+            <point key="canvasLocation" x="1135" y="-745"/>
+        </scene>
+        <!--Bugs-->
+        <scene sceneID="ckh-tT-3B4">
+            <objects>
+                <viewController id="tfx-LR-GtH" userLabel="Bugs" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qwL-Uq-Izf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dp0-Mu-E80"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KVz-7R-9jg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="850-nN-tIV" userLabel="stack">
+                                <rect key="frame" x="20" y="94" width="560" height="267"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFSafariViewController Playground" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6Y-0C-BBk" userLabel="title">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following buttons will instantiate and navigate a SFSafariViewController to a page that reproduces a given bug." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2w-EG-Ao3" userLabel="description">
+                                        <rect key="frame" x="0.0" y="41" width="560" height="36"/>
+                                        <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fni-Ts-6wK" userLabel="buttonStack">
+                                        <rect key="frame" x="0.0" y="97" width="560" height="170"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teN-MK-iRw" userLabel="bloomberg">
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="30"/>
+                                                <state key="normal" title="Animated GIF OOM Crash (Bloomberg)"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="http://bloom.bg/1NsQJpD"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_play_modal" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateToURL:" destination="tfx-LR-GtH" eventType="primaryActionTriggered" id="4ql-me-mZ0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuM-EU-qjt" userLabel="scaledGifs">
+                                                <rect key="frame" x="0.0" y="35" width="311" height="30"/>
+                                                <state key="normal" title="Animated GIF OOM Crash (HTTP Playground)"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="scaledGifs"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_play_modal" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateToCrasher:" destination="tfx-LR-GtH" eventType="primaryActionTriggered" id="p4N-nT-AoR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-db-3aF" userLabel="bigImages">
+                                                <rect key="frame" x="0.0" y="70" width="199" height="30"/>
+                                                <state key="normal" title="Large Resources OOM Crash"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="bigImages"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_play_modal" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateToCrasher:" destination="tfx-LR-GtH" eventType="primaryActionTriggered" id="rX9-Un-k7a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPq-YN-ngP" userLabel="capSubscribe">
+                                                <rect key="frame" x="0.0" y="105" width="266" height="30"/>
+                                                <state key="normal" title="ContentInset + Keyboard Usability Bug"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="http://capwatkins.com/subscribe/"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_play_modal" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateToURL:" destination="tfx-LR-GtH" eventType="primaryActionTriggered" id="ptL-uI-IW2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGc-2K-iSd" userLabel="openRadar">
+                                                <rect key="frame" x="0.0" y="140" width="275" height="30"/>
+                                                <state key="normal" title="ContentInset + Landscape Usability Bug"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_play_path" value="https://openradar.appspot.com/22602086"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_play_modal" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="navigateToURL:" destination="tfx-LR-GtH" eventType="primaryActionTriggered" id="Edu-Cn-KZn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="850-nN-tIV" firstAttribute="top" secondItem="qwL-Uq-Izf" secondAttribute="bottom" constant="30" id="2gX-8z-Uhi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="850-nN-tIV" secondAttribute="trailing" id="Neg-cd-jmd"/>
+                            <constraint firstItem="850-nN-tIV" firstAttribute="leading" secondItem="KVz-7R-9jg" secondAttribute="leadingMargin" id="Uah-E9-vSK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bugs" image="Bug" id="vbB-y1-0TU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qmy-i3-i7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="-52"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NGP-nI-dyg">
+            <objects>
+                <tabBarController id="D7B-3e-nIT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2aQ-y8-GdR"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gh4-0U-H3B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="V0Q-ko-69E"/>
+                        <segue destination="tfx-LR-GtH" kind="relationship" relationship="viewControllers" id="RM0-V5-zd5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vmE-4t-SBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="-398"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="adx-Ud-mjs">
             <objects>
                 <navigationController id="SR6-vn-Oj0" sceneMemberID="viewController">
+                    <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zbo-TL-z6Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hcP-P4-6eU"/>
+                        <segue destination="D7B-3e-nIT" kind="relationship" relationship="rootViewController" id="whm-Mf-r3K"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufc-hY-iPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-345" y="-398"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bug" width="23" height="33"/>
+        <image name="Timer" width="33" height="33"/>
+    </resources>
 </document>

@@ -6,29 +6,33 @@
 //  Copyright © 2015 Twitter. All rights reserved.
 //
 
-@import SafariServices.SFSafariViewController;
-
-#import "UIButton+SyntheticResponse.h"
+#import "UIButton+Playground.h"
 #import "ViewController.h"
 
-static NSString *kDNSFailureURL = @"https://www.thiswillnoresolve.co";
-static NSString *kSyntheticURLPrefix = @"https://http-playground.herokuapp.com/synthetic/";
+static NSString *kPlaygroundURLPrefix = @"https://http-playground.herokuapp.com";
 
 @implementation ViewController
 
-- (IBAction)navigateToDNSFailure:(id)sender {
-    NSLog(@"Navigating to DNS failure");
-    [self loadSafariViewControllerWithURL:[NSURL URLWithString:kDNSFailureURL] asModal:NO];
+- (IBAction)navigateToURL:(id)sender {
+    UIButton *button = (UIButton*)sender;
+
+    [self loadSafariViewControllerWithURL:[NSURL URLWithString:button._play_path] asModal:button._play_modal];
 }
 
 - (IBAction)navigateToSyntheticResponse:(id)sender {
     UIButton *button = (UIButton*)sender;
-    NSLog(@"Navigating with %@ delay to %@", button._syn_wait, button._syn_path);
-    NSString *url = [NSString stringWithFormat:@"%@%@?wait=%@", kSyntheticURLPrefix, button._syn_path, button._syn_wait];
-    [self loadSafariViewControllerWithURL:[NSURL URLWithString:url] asModal:button._syn_modal];
+    NSString *url = [NSString stringWithFormat:@"%@/synthetic/%@?wait=%@", kPlaygroundURLPrefix, button._play_path, button._play_wait];
+    [self loadSafariViewControllerWithURL:[NSURL URLWithString:url] asModal:button._play_modal];
+}
+
+- (IBAction)navigateToCrasher:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    NSString *url = [NSString stringWithFormat:@"%@/crashers/%@", kPlaygroundURLPrefix, button._play_path];
+    [self loadSafariViewControllerWithURL:[NSURL URLWithString:url] asModal:button._play_modal];
 }
 
 - (void)loadSafariViewControllerWithURL:(NSURL*)url asModal:(BOOL)modal {
+    NSLog(@"Navigating to %@", [url absoluteString]);
     SFSafariViewController *controller = [[SFSafariViewController alloc] initWithURL:url];
     
     controller.delegate = self;
@@ -37,8 +41,7 @@ static NSString *kSyntheticURLPrefix = @"https://http-playground.herokuapp.com/s
     if (modal) {
         [self presentViewController:controller animated:YES completion:nil];
     } else {
-        UINavigationController *parent = (UINavigationController*)self.parentViewController;
-        [parent pushViewController:controller animated:YES];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 

@@ -6,7 +6,8 @@
 //  Copyright © 2015 Twitter. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+@import SafariServices.SFSafariViewController;
 
 @interface ViewController : UIViewController <SFSafariViewControllerDelegate>
 @end
