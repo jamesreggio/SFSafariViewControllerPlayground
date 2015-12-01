@@ -27,10 +27,10 @@ When you tap a button corresponding to a bug, the app instantiates a
 `SFSafariViewController` and presents it modally. The bug should reproduce
 under the conditions specified in the Radars below:
 
-* [Animated GIF OOM Crash](https://openradar.appspot.com/)
-* [Large Resource OOM Crash](https://openradar.appspot.com/)
-* [ContentInset + Keyboard Usability Bug](https://openradar.appspot.com/)
-* [ContentInset + Landscape Usability Bug](https://openradar.appspot.com/)
+* [Animated GIF OOM Crash](https://openradar.appspot.com/23706923)
+* [Large Resource OOM Crash](https://openradar.appspot.com/23706636)
+* [ContentInset + Keyboard Usability Bug](https://openradar.appspot.com/23706138)
+* [ContentInset + Landscape Usability Bug](https://openradar.appspot.com/23706265)
 
 ## Dependencies
 
