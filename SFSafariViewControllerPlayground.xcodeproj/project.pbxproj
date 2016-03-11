@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		369813501C936AE100763820 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3698134E1C936AE100763820 /* Fabric.framework */; };
+		369813511C936AE100763820 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3698134F1C936AE100763820 /* Crashlytics.framework */; };
 		CBB5FAEC1B9F9F3D00A040D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB5FAEB1B9F9F3D00A040D6 /* main.m */; };
 		CBB5FAEF1B9F9F3D00A040D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB5FAEE1B9F9F3D00A040D6 /* AppDelegate.m */; };
 		CBB5FAF21B9F9F3D00A040D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB5FAF11B9F9F3D00A040D6 /* ViewController.m */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3698134E1C936AE100763820 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		3698134F1C936AE100763820 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CBB5FAE71B9F9F3D00A040D6 /* SFSafariViewControllerPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSafariViewControllerPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB5FAEB1B9F9F3D00A040D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBB5FAED1B9F9F3D00A040D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369813511C936AE100763820 /* Crashlytics.framework in Frameworks */,
+				369813501C936AE100763820 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,8 +49,10 @@
 		CBB5FADE1B9F9F3D00A040D6 = {
 			isa = PBXGroup;
 			children = (
-				CBB5FAE91B9F9F3D00A040D6 /* SFSafariViewControllerPlayground */,
 				CBB5FAE81B9F9F3D00A040D6 /* Products */,
+				CBB5FAE91B9F9F3D00A040D6 /* SFSafariViewControllerPlayground */,
+				3698134E1C936AE100763820 /* Fabric.framework */,
+				3698134F1C936AE100763820 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +99,7 @@
 				CBB5FAE31B9F9F3D00A040D6 /* Sources */,
 				CBB5FAE41B9F9F3D00A040D6 /* Frameworks */,
 				CBB5FAE51B9F9F3D00A040D6 /* Resources */,
+				36F810791C936468008E677E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -144,6 +153,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36F810791C936468008E677E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 2eb6d342e0196a4692eb979ecbb6a0654d772e65 ecc9f377d5db304852d9c859d12e2c6bff5b51d395ba793f58acec9ba154ea66";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBB5FAE31B9F9F3D00A040D6 /* Sources */ = {
@@ -255,6 +280,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SFSafariViewControllerPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.twitter.SFSafariViewControllerPlayground;
@@ -266,6 +296,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SFSafariViewControllerPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.twitter.SFSafariViewControllerPlayground;
