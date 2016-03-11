@@ -1,0 +1,6 @@
+# Build
+build/
+DerivedData/
+
+# Preferences
+xcuserdata/
